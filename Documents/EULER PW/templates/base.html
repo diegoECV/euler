@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{% block title %}Grupo de Ciencias Veen Euler{% endblock %}</title>
+    <meta name="description" content="{% block description %}Preparación académica 100% virtual - BECA 18, Pre Universitario, Matemáticas y Ciencias{% endblock %}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/icons/favicon.png') }}">
+    
+    {# Google Fonts - Material Icons y fuentes #}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    
+    {# Vite CSS/JS #}
+    {% if vite_dev %}
+      <!-- Vite dev server (hot reload) -->
+      <script type="module" src="http://localhost:5173/@vite/client"></script>
+      <script type="module" src="http://localhost:5173/src/main.js"></script>
+    {% else %}
+      <!-- Producción: assets generados en static/dist/assets/ -->
+      <link rel="stylesheet" href="{{ url_for('static', filename='dist/assets/main.css') }}">
+      <script type="module" src="{{ url_for('static', filename='dist/assets/index.js') }}"></script>
+    {% endif %}
+    
+    {% block extra_head %}{% endblock %}
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Navbar -->
+    {% include 'components/navbar.html' %}
+    
+    <!-- Flash Messages -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="fixed top-4 right-4 z-50 space-y-2">
+          {% for category, message in messages %}
+            <div class="alert alert-{{ 'success' if category == 'success' else 'error' }} p-4 rounded-lg shadow-lg max-w-md">
+              <div class="flex items-center">
+                {% if category == 'success' %}
+                  <span class="material-icons text-green-600 mr-2">check_circle</span>
+                  <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded">
+                {% else %}
+                  <span class="material-icons text-red-600 mr-2">error</span>
+                  <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+                {% endif %}
+                    {{ message }}
+                  </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+        <script>
+          // Auto-hide flash messages after 5 seconds
+          setTimeout(function() {
+            const alerts = document.querySelectorAll('.alert');
+            alerts.forEach(alert => {
+              alert.style.opacity = '0';
+              alert.style.transform = 'translateX(100%)';
+              setTimeout(() => alert.remove(), 300);
+            });
+          }, 5000);
+        </script>
+      {% endif %}
+    {% endwith %}
+
+    <!-- Main Content -->
+    <main>
+      {% block content %}{% endblock %}
+    </main>
+    
+    <!-- Footer -->
+    {% include 'components/footer.html' %}
+    
+    {% block extra_scripts %}{% endblock %}
+  </body>
+</html>

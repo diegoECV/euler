@@ -1,0 +1,258 @@
+{% extends "base.html" %}
+
+{% block title %}Horarios - Grupo de Ciencias Veen Euler{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-green-600 to-teal-600 text-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">Horarios de Clases</h1>
+    <p class="text-xl md:text-2xl text-green-100">Flexibilidad total para tu éxito académico</p>
+  </div>
+</section>
+
+<!-- Horarios por Programa -->
+<section class="py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Horarios por Programa</h2>
+      <p class="text-xl text-gray-600">Elige el horario que mejor se adapte a tu rutina</p>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Programas Regulares -->
+      <div class="bg-white rounded-xl shadow-lg p-8">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+          <span class="material-icons text-blue-500 mr-3">schedule</span>
+          Programas Regulares
+        </h3>
+        
+        <div class="space-y-6">
+          <!-- Matecero -->
+          <div class="border-l-4 border-yellow-500 pl-4">
+            <h4 class="text-lg font-bold text-gray-900">MATECERO (4to - 6to Primaria)</h4>
+            <div class="mt-2 space-y-1">
+              <p class="text-gray-600"><strong>Lunes a Viernes:</strong> 5:00 PM - 6:50 PM</p>
+              <p class="text-sm text-yellow-600">Aritmética • Geometría • Razonamiento Matemático</p>
+            </div>
+          </div>
+          
+          <!-- Básico -->
+          <div class="border-l-4 border-blue-500 pl-4">
+            <h4 class="text-lg font-bold text-gray-900">BÁSICO (1ero - 2do Secundaria)</h4>
+            <div class="mt-2 space-y-1">
+              <p class="text-gray-600"><strong>Lunes a Viernes:</strong> 5:00 PM - 7:00 PM</p>
+              <p class="text-sm text-blue-600">Aritmética • Álgebra • Geometría • Trigonometría</p>
+            </div>
+          </div>
+          
+          <!-- Intermedio -->
+          <div class="border-l-4 border-green-500 pl-4">
+            <h4 class="text-lg font-bold text-gray-900">INTERMEDIO (3ero - 4to Secundaria)</h4>
+            <div class="mt-2 space-y-1">
+              <p class="text-gray-600"><strong>Lunes a Viernes:</strong> 7:00 PM - 9:00 PM</p>
+              <p class="text-sm text-green-600">Aritmética • Álgebra • Geometría • Trigonometría</p>
+            </div>
+          </div>
+          
+          <!-- Preuniversitario -->
+          <div class="border-l-4 border-purple-500 pl-4">
+            <h4 class="text-lg font-bold text-gray-900">PREUNIVERSITARIO (5to - Egresados)</h4>
+            <div class="mt-2 space-y-1">
+              <p class="text-gray-600"><strong>Lunes a Viernes:</strong> 7:00 PM - 9:00 PM</p>
+              <p class="text-sm text-purple-600">Álgebra • Geometría • Aritmética • Física • Química</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Programas Especiales -->
+      <div class="bg-white rounded-xl shadow-lg p-8">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+          <span class="material-icons text-orange-500 mr-3">star</span>
+          Programas Especiales
+        </h3>
+        
+        <div class="space-y-6">
+          <!-- Beca 18 -->
+          <div class="bg-blue-50 rounded-lg p-4">
+            <h4 class="text-lg font-bold text-blue-900 mb-2">BECA 18 - PRONABEC</h4>
+            <div class="space-y-2">
+              <p class="text-blue-700"><strong>Modalidad Intensiva:</strong></p>
+              <p class="text-sm text-blue-600">• Lunes a Viernes: 6:00 PM - 8:00 PM</p>
+              <p class="text-sm text-blue-600">• Sábados: 9:00 AM - 12:00 PM</p>
+              <p class="text-sm text-blue-600">• Domingos: 9:00 AM - 11:00 AM (Simulacros)</p>
+            </div>
+          </div>
+          
+          <!-- Talleres Sabatinos -->
+          <div class="bg-purple-50 rounded-lg p-4">
+            <h4 class="text-lg font-bold text-purple-900 mb-2">TALLERES SABATINOS</h4>
+            <div class="space-y-2">
+              <p class="text-purple-700"><strong>Sábados:</strong></p>
+              <p class="text-sm text-purple-600">• Física: 9:00 AM - 10:30 AM</p>
+              <p class="text-sm text-purple-600">• Química: 10:40 AM - 12:10 PM</p>
+              <p class="text-sm text-purple-600 font-medium">¡Talleres GRATUITOS!</p>
+            </div>
+          </div>
+          
+          <!-- Simulacros Domingos -->
+          <div class="bg-red-50 rounded-lg p-4">
+            <h4 class="text-lg font-bold text-red-900 mb-2">SIMULACROS DOMINGOS</h4>
+            <div class="space-y-2">
+              <p class="text-red-700"><strong>Domingos: 9:00 AM - 11:00 AM</strong></p>
+              <p class="text-sm text-red-600">• Simulacros Beca 18</p>
+              <p class="text-sm text-red-600">• Exámenes PRONABEC</p>
+              <p class="text-sm text-red-600">• Admisión Universitaria</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Calendario Semanal -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Calendario Semanal</h2>
+      <p class="text-xl text-gray-600">Vista completa de todos nuestros programas</p>
+    </div>
+    
+    <!-- Tabla de Horarios -->
+    <div class="bg-white rounded-xl shadow-lg overflow-hidden">
+      <div class="overflow-x-auto">
+        <table class="w-full">
+          <thead class="bg-gray-800 text-white">
+            <tr>
+              <th class="px-4 py-3 text-left">Horario</th>
+              <th class="px-4 py-3 text-center">Lun</th>
+              <th class="px-4 py-3 text-center">Mar</th>
+              <th class="px-4 py-3 text-center">Mié</th>
+              <th class="px-4 py-3 text-center">Jue</th>
+              <th class="px-4 py-3 text-center">Vie</th>
+              <th class="px-4 py-3 text-center">Sáb</th>
+              <th class="px-4 py-3 text-center">Dom</th>
+            </tr>
+          </thead>
+          <tbody class="text-sm">
+            <tr class="border-b">
+              <td class="px-4 py-3 font-medium">5:00 - 6:50 PM</td>
+              <td class="px-4 py-3 text-center bg-yellow-50 text-yellow-700">Matecero</td>
+              <td class="px-4 py-3 text-center bg-yellow-50 text-yellow-700">Matecero</td>
+              <td class="px-4 py-3 text-center bg-yellow-50 text-yellow-700">Matecero</td>
+              <td class="px-4 py-3 text-center bg-yellow-50 text-yellow-700">Matecero</td>
+              <td class="px-4 py-3 text-center bg-yellow-50 text-yellow-700">Matecero</td>
+              <td class="px-4 py-3 text-center">-</td>
+              <td class="px-4 py-3 text-center">-</td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-4 py-3 font-medium">5:00 - 7:00 PM</td>
+              <td class="px-4 py-3 text-center bg-blue-50 text-blue-700">Básico</td>
+              <td class="px-4 py-3 text-center bg-blue-50 text-blue-700">Básico</td>
+              <td class="px-4 py-3 text-center bg-blue-50 text-blue-700">Básico</td>
+              <td class="px-4 py-3 text-center bg-blue-50 text-blue-700">Básico</td>
+              <td class="px-4 py-3 text-center bg-blue-50 text-blue-700">Básico</td>
+              <td class="px-4 py-3 text-center">-</td>
+              <td class="px-4 py-3 text-center">-</td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-4 py-3 font-medium">6:00 - 8:00 PM</td>
+              <td class="px-4 py-3 text-center bg-indigo-50 text-indigo-700">Beca 18</td>
+              <td class="px-4 py-3 text-center bg-indigo-50 text-indigo-700">Beca 18</td>
+              <td class="px-4 py-3 text-center bg-indigo-50 text-indigo-700">Beca 18</td>
+              <td class="px-4 py-3 text-center bg-indigo-50 text-indigo-700">Beca 18</td>
+              <td class="px-4 py-3 text-center bg-indigo-50 text-indigo-700">Beca 18</td>
+              <td class="px-4 py-3 text-center">-</td>
+              <td class="px-4 py-3 text-center">-</td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-4 py-3 font-medium">7:00 - 9:00 PM</td>
+              <td class="px-4 py-3 text-center bg-green-50 text-green-700">Intermedio</td>
+              <td class="px-4 py-3 text-center bg-green-50 text-green-700">Intermedio</td>
+              <td class="px-4 py-3 text-center bg-green-50 text-green-700">Intermedio</td>
+              <td class="px-4 py-3 text-center bg-green-50 text-green-700">Intermedio</td>
+              <td class="px-4 py-3 text-center bg-green-50 text-green-700">Intermedio</td>
+              <td class="px-4 py-3 text-center">-</td>
+              <td class="px-4 py-3 text-center">-</td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-4 py-3 font-medium">7:00 - 9:00 PM</td>
+              <td class="px-4 py-3 text-center bg-purple-50 text-purple-700">Preuniv.</td>
+              <td class="px-4 py-3 text-center bg-purple-50 text-purple-700">Preuniv.</td>
+              <td class="px-4 py-3 text-center bg-purple-50 text-purple-700">Preuniv.</td>
+              <td class="px-4 py-3 text-center bg-purple-50 text-purple-700">Preuniv.</td>
+              <td class="px-4 py-3 text-center bg-purple-50 text-purple-700">Preuniv.</td>
+              <td class="px-4 py-3 text-center">-</td>
+              <td class="px-4 py-3 text-center">-</td>
+            </tr>
+            <tr class="border-b">
+              <td class="px-4 py-3 font-medium">9:00 - 12:00 PM</td>
+              <td class="px-4 py-3 text-center">-</td>
+              <td class="px-4 py-3 text-center">-</td>
+              <td class="px-4 py-3 text-center">-</td>
+              <td class="px-4 py-3 text-center">-</td>
+              <td class="px-4 py-3 text-center">-</td>
+              <td class="px-4 py-3 text-center bg-orange-50 text-orange-700">Talleres</td>
+              <td class="px-4 py-3 text-center">-</td>
+            </tr>
+            <tr>
+              <td class="px-4 py-3 font-medium">9:00 - 11:00 AM</td>
+              <td class="px-4 py-3 text-center">-</td>
+              <td class="px-4 py-3 text-center">-</td>
+              <td class="px-4 py-3 text-center">-</td>
+              <td class="px-4 py-3 text-center">-</td>
+              <td class="px-4 py-3 text-center">-</td>
+              <td class="px-4 py-3 text-center">-</td>
+              <td class="px-4 py-3 text-center bg-red-50 text-red-700">Simulacros</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Información Adicional -->
+<section class="py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Flexibilidad -->
+      <div class="bg-blue-50 rounded-xl p-6 text-center">
+        <div class="bg-blue-500 w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <span class="material-icons icon-lg text-white">access_time</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Horarios Flexibles</h3>
+        <p class="text-gray-600">Si no puedes asistir a una clase, todas quedan grabadas para que las veas cuando tengas tiempo.</p>
+      </div>
+      
+      <!-- Recuperación -->
+      <div class="bg-green-50 rounded-xl p-6 text-center">
+        <div class="bg-green-500 w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <span class="material-icons icon-lg text-white">replay</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Clases de Recuperación</h3>
+        <p class="text-gray-600">Ofrecemos sesiones adicionales para estudiantes que necesiten refuerzo en temas específicos.</p>
+      </div>
+      
+      <!-- Consultas -->
+      <div class="bg-purple-50 rounded-xl p-6 text-center">
+        <div class="bg-purple-500 w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <span class="material-icons icon-lg text-white">help_outline</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Consultas Personalizadas</h3>
+        <p class="text-gray-600">Agenda tutorías individuales fuera del horario de clases para resolver dudas específicas.</p>
+      </div>
+    </div>
+    
+    <!-- CTA -->
+    <div class="text-center mt-12">
+      <a href="https://wa.me/51964266258" class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors inline-flex items-center">
+        <span class="material-icons mr-2 text-white">message</span>
+        Consultar Horarios Disponibles
+      </a>
+    </div>
+  </div>
+</section>
+{% endblock %}

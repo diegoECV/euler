@@ -1,0 +1,509 @@
+{% extends "base.html" %}
+
+{% block title %}Inicio - Grupo de Ciencias Veen Euler{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+    <div class="text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        Grupo de Ciencias <span class="text-yellow-400">Veen Euler</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 text-blue-100">
+        Preparación académica 100% virtual para tu éxito educativo
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="{{ url_for('inscripciones') }}" class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-8 rounded-lg text-lg transition-colors">
+          Inscríbete Ahora
+        </a>
+        <a href="https://wa.me/51964266258" class="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-8 rounded-lg text-lg transition-colors">
+          WhatsApp: 964 266 258
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Programas Destacados -->
+<section class="py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestros Programas</h2>
+      <p class="text-xl text-gray-600">Excelencia educativa en cada nivel</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <!-- BECA 18 -->
+      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+        <div class="bg-blue-500 text-white rounded-lg p-4 mb-4">
+          <h3 class="text-xl font-bold">BECA 18</h3>
+          <p class="text-sm opacity-90">PRONABEC</p>
+        </div>
+        <p class="text-gray-600 mb-4">Seminarios intensivos y talleres de preparación para la Beca 18.</p>
+        <a href="{{ url_for('beca18') }}" class="text-blue-500 hover:text-blue-700 font-semibold">Ver más →</a>
+      </div>
+      
+      <!-- Pre Universitario -->
+      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+        <div class="bg-purple-500 text-white rounded-lg p-4 mb-4">
+          <h3 class="text-xl font-bold">Pre Universitario</h3>
+          <p class="text-sm opacity-90">Formativo</p>
+        </div>
+        <p class="text-gray-600 mb-4">Preparación completa para el ingreso universitario.</p>
+        <a href="{{ url_for('preuniversitario') }}" class="text-purple-500 hover:text-purple-700 font-semibold">Ver más →</a>
+      </div>
+      
+      <!-- Matemáticas -->
+      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+        <div class="bg-green-500 text-white rounded-lg p-4 mb-4">
+          <h3 class="text-xl font-bold">Matemáticas</h3>
+          <p class="text-sm opacity-90">Para todos</p>
+        </div>
+        <p class="text-gray-600 mb-4">Desde primaria hasta preuniversitario, todos los niveles.</p>
+        <a href="{{ url_for('matematicas') }}" class="text-green-500 hover:text-green-700 font-semibold">Ver más →</a>
+      </div>
+      
+      <!-- Ciencias -->
+      <div class="bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow">
+        <div class="bg-orange-500 text-white rounded-lg p-4 mb-4">
+          <h3 class="text-xl font-bold">Ciencias</h3>
+          <p class="text-sm opacity-90">Física y Química</p>
+        </div>
+        <p class="text-gray-600 mb-4">Master en Ciencias con talleres sabatinos gratuitos.</p>
+        <a href="{{ url_for('ciencias') }}" class="text-orange-500 hover:text-orange-700 font-semibold">Ver más →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Niveles Educativos -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Programas por Nivel</h2>
+      <p class="text-xl text-gray-600">Desde primaria hasta preuniversitario</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <!-- Matecero -->
+      <div class="bg-gradient-to-br from-yellow-400 to-orange-500 text-white rounded-lg p-6 text-center">
+        <h3 class="text-2xl font-bold mb-2">MATECERO</h3>
+        <p class="text-sm mb-4">4to a 6to de Primaria</p>
+        <div class="space-y-2 text-sm">
+          <p><strong>Aritmética</strong> • <strong>Geometría</strong></p>
+          <p><strong>Razonamiento Matemático</strong></p>
+          <p class="mt-4 bg-white bg-opacity-20 rounded p-2 text-black">
+            <strong>Horarios:</strong> 5:00 PM - 6:50 PM
+          </p>
+        </div>
+      </div>
+      
+      <!-- Básico -->
+      <div class="bg-gradient-to-br from-blue-500 to-purple-600 text-white rounded-lg p-6 text-center">
+        <h3 class="text-2xl font-bold mb-2">BÁSICO</h3>
+        <p class="text-sm mb-4">1ero y 2do Secundaria</p>
+        <div class="space-y-2 text-sm">
+          <p><strong>Aritmética</strong> • <strong>Álgebra</strong></p>
+          <p><strong>Geometría</strong> • <strong>Trigonometría</strong></p>
+          <p class="mt-4 bg-white bg-opacity-20 rounded p-2 text-black">
+            <strong>Horarios:</strong> 5:00 PM - 7:00 PM
+          </p>
+        </div>
+      </div>
+      
+      <!-- Intermedio -->
+      <div class="bg-gradient-to-br from-green-500 to-teal-600 text-white rounded-lg p-6 text-center">
+        <h3 class="text-2xl font-bold mb-2">INTERMEDIO</h3>
+        <p class="text-sm mb-4">3er y 4to Año Secundaria</p>
+        <div class="space-y-2 text-sm">
+          <p><strong>Aritmética</strong> • <strong>Álgebra</strong></p>
+          <p><strong>Geometría</strong> • <strong>Trigonometría</strong></p>
+          <p class="mt-4 bg-white bg-opacity-20 rounded p-2 text-black">
+            <strong>Horarios:</strong> 7:00 PM - 9:00 PM
+          </p>
+        </div>
+      </div>
+      
+      <!-- Preuniversitario -->
+      <div class="bg-gradient-to-br from-purple-600 to-pink-600 text-white rounded-lg p-6 text-center">
+        <h3 class="text-2xl font-bold mb-2">PREUNIVERSITARIO</h3>
+        <p class="text-sm mb-4">5to Año y Egresados</p>
+        <div class="space-y-2 text-sm">
+          <p><strong>Álgebra</strong> • <strong>Geometría</strong></p>
+          <p><strong>Aritmética</strong> • <strong>Física</strong> • <strong>Química</strong></p>
+          <p class="mt-4 bg-white bg-opacity-20 rounded p-2 text-black">
+            <strong>Horarios:</strong> 7:00 PM - 9:00 PM
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Características -->
+<section class="bg-gray-100 py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">¿Por qué Elegirnos?</h2>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="text-center">
+        <div class="bg-blue-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="material-icons icon-lg">computer</span>
+        </div>
+        <h3 class="text-xl font-bold mb-2">100% Virtual</h3>
+        <p class="text-gray-600">Estudia desde la comodidad de tu hogar con clases en vivo interactivas.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="material-icons icon-lg">school</span>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Profesores Expertos</h3>
+        <p class="text-gray-600">Docentes especializados con amplia experiencia en preparación académica.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="bg-purple-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="material-icons icon-lg">schedule</span>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Horarios Flexibles</h3>
+        <p class="text-gray-600">Múltiples horarios de mañana, tarde y noche para adaptarse a ti.</p>
+      </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+      <div class="text-center">
+        <div class="bg-red-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="material-icons icon-lg">quiz</span>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Exámenes en Cada Clase</h3>
+        <p class="text-gray-600">Evaluación continua para garantizar tu progreso académico.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="bg-yellow-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="material-icons icon-lg">library_books</span>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Material de Estudio</h3>
+        <p class="text-gray-600">Recursos educativos completos y actualizados para tu aprendizaje.</p>
+      </div>
+      
+      <div class="text-center">
+        <div class="bg-indigo-500 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+          <span class="material-icons icon-lg">person</span>
+        </div>
+        <h3 class="text-xl font-bold mb-2">Tutoría Personalizada</h3>
+        <p class="text-gray-600">Orientación académica individual para resolver tus dudas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Estadísticas y Calidad -->
+<section class="py-16 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestra Trayectoria</h2>
+      <p class="text-xl text-gray-600">Años de experiencia formando estudiantes exitosos</p>
+    </div>
+    
+    <!-- Estadísticas -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-16">
+      <div class="text-center">
+        <div class="bg-gradient-to-r from-blue-500 to-blue-600 text-white rounded-lg p-6">
+          <div class="text-4xl font-bold mb-2">+500</div>
+          <p class="text-blue-100">Estudiantes Activos</p>
+        </div>
+      </div>
+      
+      <div class="text-center">
+        <div class="bg-gradient-to-r from-green-500 to-green-600 text-white rounded-lg p-6">
+          <div class="text-4xl font-bold mb-2">95%</div>
+          <p class="text-green-100">Tasa de Aprobación</p>
+        </div>
+      </div>
+      
+      <div class="text-center">
+        <div class="bg-gradient-to-r from-purple-500 to-purple-600 text-white rounded-lg p-6">
+          <div class="text-4xl font-bold mb-2">8+</div>
+          <p class="text-purple-100">Años de Experiencia</p>
+        </div>
+      </div>
+      
+      <div class="text-center">
+        <div class="bg-gradient-to-r from-orange-500 to-orange-600 text-white rounded-lg p-6">
+          <div class="text-4xl font-bold mb-2">100+</div>
+          <p class="text-orange-100">Ingresantes a Universidades</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Información de Profesores -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <!-- Equipo Docente -->
+      <div class="bg-gray-50 rounded-xl p-8">
+        <div class="flex items-center mb-6">
+          <div class="bg-blue-500 text-white w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+            <span class="material-icons">group</span>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900">Equipo Docente de Elite</h3>
+            <p class="text-gray-600">Profesionales especializados</p>
+          </div>
+        </div>
+        <ul class="space-y-4 text-gray-700">
+          <li class="flex items-start">
+            <span class="material-icons text-green-500 mr-3 mt-1">verified</span>
+            <div>
+              <strong>Ingenieros y Licenciados</strong> graduados de las mejores universidades del país
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="material-icons text-green-500 mr-3 mt-1">verified</span>
+            <div>
+              <strong>Experiencia comprobada</strong> en preparación preuniversitaria y Beca 18
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="material-icons text-green-500 mr-3 mt-1">verified</span>
+            <div>
+              <strong>Metodología actualizada</strong> con técnicas pedagógicas innovadoras
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="material-icons text-green-500 mr-3 mt-1">verified</span>
+            <div>
+              <strong>Capacitación continua</strong> en nuevas tendencias educativas
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Calidad Educativa -->
+      <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-xl p-8">
+        <div class="flex items-center mb-6">
+          <div class="bg-purple-500 text-white w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+            <span class="material-icons">star</span>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900">Calidad Garantizada</h3>
+            <p class="text-gray-600">Excelencia en cada clase</p>
+          </div>
+        </div>
+        <ul class="space-y-4 text-gray-700">
+          <li class="flex items-start">
+            <span class="material-icons text-purple-500 mr-3 mt-1">psychology</span>
+            <div>
+              <strong>Clases personalizadas</strong> adaptadas al ritmo de cada estudiante
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="material-icons text-purple-500 mr-3 mt-1">assessment</span>
+            <div>
+              <strong>Evaluación constante</strong> con retroalimentación inmediata
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="material-icons text-purple-500 mr-3 mt-1">support_agent</span>
+            <div>
+              <strong>Soporte académico 24/7</strong> para resolver dudas fuera de clase
+            </div>
+          </li>
+          <li class="flex items-start">
+            <span class="material-icons text-purple-500 mr-3 mt-1">workspace_premium</span>
+            <div>
+              <strong>Certificación de estudios</strong> al completar cada programa
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Simulacros y Talleres Especiales -->
+<section class="py-16 bg-blue-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Programas Especiales</h2>
+      <p class="text-xl text-gray-600">Preparación intensiva y talleres complementarios</p>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Simulacros -->
+      <div class="bg-white rounded-lg shadow-lg p-8">
+        <div class="flex items-center mb-6">
+          <div class="bg-red-500 text-white w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+            <span class="material-icons">assignment</span>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900">Simulacros Domingos</h3>
+            <p class="text-gray-600">9:00 AM a 11:00 AM</p>
+          </div>
+        </div>
+        <ul class="space-y-3 text-gray-600">
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold mr-3">✓</span>
+            Simulacros de examen BECA 18
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold mr-3">✓</span>
+            Exámenes de pre-selección PRONABEC
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold mr-3">✓</span>
+            Simulacros de admisión universitaria
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 w-6 h-6 rounded-full flex items-center justify-center text-sm font-bold mr-3">✓</span>
+            Evaluación y retroalimentación inmediata
+          </li>
+        </ul>
+      </div>
+      
+      <!-- Talleres Sabatinos -->
+      <div class="bg-white rounded-lg shadow-lg p-8">
+        <div class="flex items-center mb-6">
+          <div class="bg-purple-500 text-white w-12 h-12 rounded-lg flex items-center justify-center mr-4">
+            <span class="material-icons">construction</span>
+          </div>
+          <div>
+            <h3 class="text-2xl font-bold text-gray-900">Talleres Avanzados</h3>
+            <p class="text-gray-600">Sesiones especializadas</p>
+          </div>
+        </div>
+        <ul class="space-y-3 text-gray-600">
+          <li class="flex items-center">
+            <span class="bg-blue-100 text-blue-800 w-6 h-6 rounded-full flex items-center justify-center text-xs mr-3">
+              <span class="material-icons" style="font-size: 14px;">science</span>
+            </span>
+            Física (9:00 AM - 10:30 AM)
+          </li>
+          <li class="flex items-center">
+            <span class="bg-purple-100 text-purple-800 w-6 h-6 rounded-full flex items-center justify-center text-xs mr-3">
+              <span class="material-icons" style="font-size: 14px;">biotech</span>
+            </span>
+            Química (10:40 AM - 12:10 PM)
+          </li>
+          <li class="flex items-center">
+            <span class="bg-orange-100 text-orange-800 w-6 h-6 rounded-full flex items-center justify-center text-xs mr-3">
+              <span class="material-icons" style="font-size: 14px;">bar_chart</span>
+            </span>
+            Exámenes de salida en cada sesión
+          </li>
+          <li class="flex items-center">
+            <span class="bg-green-100 text-green-800 w-6 h-6 rounded-full flex items-center justify-center text-xs mr-3">
+              <span class="material-icons" style="font-size: 14px;">emoji_events</span>
+            </span>
+            Preparación para competencias académicas
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonios y Logros -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Nuestros Logros</h2>
+      <p class="text-xl text-gray-600">El éxito de nuestros estudiantes es nuestro mejor respaldo</p>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Logro 1 - Beca 18 -->
+      <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+        <div class="bg-yellow-500 w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <span class="material-icons icon-lg text-white">emoji_events</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Becarios Exitosos</h3>
+        <p class="text-3xl font-bold text-yellow-500 mb-2">150+</p>
+        <p class="text-gray-600">Estudiantes han obtenido la Beca 18 con nuestra preparación</p>
+        <div class="mt-4 p-3 bg-yellow-50 rounded-lg">
+          <p class="text-sm text-yellow-700 font-medium">"Gracias al Grupo Euler logré mi Beca 18 y ahora estudio Ingeniería"</p>
+          <p class="text-xs text-yellow-600 mt-1">- María López, Becaria 2024</p>
+        </div>
+      </div>
+      
+      <!-- Logro 2 - Ingresantes -->
+      <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+        <div class="bg-blue-500 w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <span class="material-icons icon-lg text-white">school</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Ingresantes</h3>
+        <p class="text-3xl font-bold text-blue-500 mb-2">200+</p>
+        <p class="text-gray-600">Alumnos ingresaron a universidades nacionales y privadas</p>
+        <div class="mt-4 p-3 bg-blue-50 rounded-lg">
+          <p class="text-sm text-blue-700 font-medium">"El método de enseñanza es excelente, ingresé a la UNI"</p>
+          <p class="text-xs text-blue-600 mt-1">- Carlos Mendoza, Ingresante UNI 2024</p>
+        </div>
+      </div>
+      
+      <!-- Logro 3 - Excelencia -->
+      <div class="bg-white rounded-xl shadow-lg p-6 text-center">
+        <div class="bg-green-500 w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <span class="material-icons icon-lg text-white">verified</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Excelencia Académica</h3>
+        <p class="text-3xl font-bold text-green-500 mb-2">95%</p>
+        <p class="text-gray-600">De nuestros estudiantes aprueban sus objetivos académicos</p>
+        <div class="mt-4 p-3 bg-green-50 rounded-lg">
+          <p class="text-sm text-green-700 font-medium">"Los profesores son muy dedicados y pacientes"</p>
+          <p class="text-xs text-green-600 mt-1">- Ana Rodríguez, Estudiante Activa</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Universidades donde ingresan nuestros alumnos -->
+    <div class="mt-16 text-center">
+      <h3 class="text-2xl font-bold text-gray-900 mb-8">Nuestros Estudiantes Ingresan a:</h3>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div class="bg-white rounded-lg p-4 shadow-md">
+          <p class="font-semibold text-gray-800">UNI</p>
+          <p class="text-sm text-gray-600">Universidad Nacional de Ingeniería</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 shadow-md">
+          <p class="font-semibold text-gray-800">UNMSM</p>
+          <p class="text-sm text-gray-600">Universidad Nacional Mayor de San Marcos</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 shadow-md">
+          <p class="font-semibold text-gray-800">PUCP</p>
+          <p class="text-sm text-gray-600">Pontificia Universidad Católica del Perú</p>
+        </div>
+        <div class="bg-white rounded-lg p-4 shadow-md">
+          <p class="font-semibold text-gray-800">UP</p>
+          <p class="text-sm text-gray-600">Universidad del Pacífico</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Final -->
+<section class="bg-gradient-to-r from-green-500 to-blue-600 text-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Listo para Comenzar?</h2>
+    <p class="text-xl mb-8 text-green-100">Únete a cientos de estudiantes que han logrado sus metas académicas</p>
+    
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="https://wa.me/51964266258" class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors flex items-center">
+        <span class="material-icons mr-2">message</span>
+        Contactar por WhatsApp
+      </a>
+      
+      <div class="flex items-center text-lg">
+        <span class="material-icons mr-2">phone</span>
+        <span class="font-bold">964 266 258</span>
+      </div>
+    </div>
+    
+    <p class="mt-6 text-sm text-green-100">
+      Síguenos en nuestras redes sociales: <strong>GC Veen Euler</strong>
+    </p>
+  </div>
+</section>
+{% endblock %}

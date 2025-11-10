@@ -1,0 +1,55 @@
+<nav class="bg-blue-600 text-white shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="flex items-center">
+        <img class="h-10 w-10 rounded-full mr-2" src="{{ url_for('static', filename='img/banners/euler.png') }}" alt="Euler Logo">
+        <span class="text-xl font-bold">Ciencias Veen Euler</span>
+      </div>
+      
+      <!-- Navigation Links -->
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-baseline space-x-4">
+          <a href="{{ url_for('index') }}" class="hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Inicio</a>
+          <div class="relative group">
+            <button class="hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Programas</button>
+            <div class="absolute left-0 mt-2 w-48 bg-white text-gray-800 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+              <a href="{{ url_for('beca18') }}" class="block px-4 py-2 text-sm hover:bg-gray-100">BECA 18</a>
+              <a href="{{ url_for('preuniversitario') }}" class="block px-4 py-2 text-sm hover:bg-gray-100">Pre Universitario</a>
+              <a href="{{ url_for('matematicas') }}" class="block px-4 py-2 text-sm hover:bg-gray-100">Matemáticas</a>
+              <a href="{{ url_for('ciencias') }}" class="block px-4 py-2 text-sm hover:bg-gray-100">Ciencias</a>
+            </div>
+          </div>
+          <a href="{{ url_for('horarios') }}" class="hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Horarios</a>
+          <a href="{{ url_for('inscripciones') }}" class="hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Inscripciones</a>
+          <a href="{{ url_for('nosotros') }}" class="hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Nosotros</a>
+          <a href="{{ url_for('contacto') }}" class="hover:bg-blue-700 px-3 py-2 rounded-md text-sm font-medium">Contacto</a>
+        </div>
+      </div>
+      
+      <!-- Mobile menu button -->
+      <div class="md:hidden">
+        <button id="mobile-menu-btn" class="hover:bg-blue-700 p-2 rounded-md">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Mobile menu -->
+  <div id="mobile-menu" class="md:hidden hidden">
+    <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-blue-700">
+      <a href="{{ url_for('index') }}" class="block hover:bg-blue-800 px-3 py-2 rounded-md text-base font-medium">Inicio</a>
+      <a href="{{ url_for('beca18') }}" class="block hover:bg-blue-800 px-3 py-2 rounded-md text-base font-medium">BECA 18</a>
+      <a href="{{ url_for('preuniversitario') }}" class="block hover:bg-blue-800 px-3 py-2 rounded-md text-base font-medium">Pre Universitario</a>
+      <a href="{{ url_for('matematicas') }}" class="block hover:bg-blue-800 px-3 py-2 rounded-md text-base font-medium">Matemáticas</a>
+      <a href="{{ url_for('ciencias') }}" class="block hover:bg-blue-800 px-3 py-2 rounded-md text-base font-medium">Ciencias</a>
+      <a href="{{ url_for('horarios') }}" class="block hover:bg-blue-800 px-3 py-2 rounded-md text-base font-medium">Horarios</a>
+      <a href="{{ url_for('inscripciones') }}" class="block hover:bg-blue-800 px-3 py-2 rounded-md text-base font-medium">Inscripciones</a>
+      <a href="{{ url_for('nosotros') }}" class="block hover:bg-blue-800 px-3 py-2 rounded-md text-base font-medium">Nosotros</a>
+      <a href="{{ url_for('contacto') }}" class="block hover:bg-blue-800 px-3 py-2 rounded-md text-base font-medium">Contacto</a>
+    </div>
+  </div>
+</nav>

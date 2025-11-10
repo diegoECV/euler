@@ -1,0 +1,286 @@
+{% extends "base.html" %}
+
+{% block title %}Inscripciones - Grupo de Ciencias Veen Euler{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-yellow-500 to-orange-500 text-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">¡Inscríbete Ahora!</h1>
+    <p class="text-xl md:text-2xl text-yellow-100">Comienza tu camino hacia el éxito académico</p>
+  </div>
+</section>
+
+<!-- Proceso de Inscripción -->
+<section class="py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Proceso de Inscripción</h2>
+      <p class="text-xl text-gray-600">Sigue estos simples pasos para unirte a nosotros</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <!-- Paso 1 -->
+      <div class="text-center">
+        <div class="bg-blue-500 w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <span class="material-icons icon-lg text-white">message</span>
+        </div>
+        <div class="bg-blue-100 text-blue-800 text-sm font-bold px-3 py-1 rounded-full mb-2 inline-block">PASO 1</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Contacto Inicial</h3>
+        <p class="text-gray-600">Escríbenos por WhatsApp al 964 266 258 indicando tu interés</p>
+      </div>
+      
+      <!-- Paso 2 -->
+      <div class="text-center">
+        <div class="bg-green-500 w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <span class="material-icons icon-lg text-white">quiz</span>
+        </div>
+        <div class="bg-green-100 text-green-800 text-sm font-bold px-3 py-1 rounded-full mb-2 inline-block">PASO 2</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Evaluación Diagnóstica</h3>
+        <p class="text-gray-600">Realizas una prueba gratuita para determinar tu nivel académico</p>
+      </div>
+      
+      <!-- Paso 3 -->
+      <div class="text-center">
+        <div class="bg-purple-500 w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <span class="material-icons icon-lg text-white">assignment</span>
+        </div>
+        <div class="bg-purple-100 text-purple-800 text-sm font-bold px-3 py-1 rounded-full mb-2 inline-block">PASO 3</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">Registro de Datos</h3>
+        <p class="text-gray-600">Completas tu información personal y eliges tu programa</p>
+      </div>
+      
+      <!-- Paso 4 -->
+      <div class="text-center">
+        <div class="bg-orange-500 w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <span class="material-icons icon-lg text-white">school</span>
+        </div>
+        <div class="bg-orange-100 text-orange-800 text-sm font-bold px-3 py-1 rounded-full mb-2 inline-block">PASO 4</div>
+        <h3 class="text-lg font-bold text-gray-900 mb-2">¡Inicia Clases!</h3>
+        <p class="text-gray-600">Accedes a nuestra plataforma y comenzamos tu preparación</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Formulario de Pre-inscripción -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="bg-white rounded-xl shadow-lg p-8">
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-gray-900 mb-4">Formulario de Pre-inscripción</h2>
+        <p class="text-xl text-gray-600">Completa tus datos y nos contactaremos contigo inmediatamente</p>
+      </div>
+      
+      <form class="space-y-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Nombres *</label>
+            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tus nombres" required>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Apellidos *</label>
+            <input type="text" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Tus apellidos" required>
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">WhatsApp / Teléfono *</label>
+            <input type="tel" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="+51 999 999 999" required>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+            <input type="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="tu.email@ejemplo.com">
+          </div>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Edad</label>
+            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+              <option value="">Selecciona tu edad</option>
+              <option value="9-11">9 - 11 años</option>
+              <option value="12-13">12 - 13 años</option>
+              <option value="14-15">14 - 15 años</option>
+              <option value="16-17">16 - 17 años</option>
+              <option value="18+">18 años o más</option>
+            </select>
+          </div>
+          
+          <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Nivel Académico Actual</label>
+            <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+              <option value="">Selecciona tu nivel</option>
+              <option value="4to-primaria">4to Primaria</option>
+              <option value="5to-primaria">5to Primaria</option>
+              <option value="6to-primaria">6to Primaria</option>
+              <option value="1ro-secundaria">1ro Secundaria</option>
+              <option value="2do-secundaria">2do Secundaria</option>
+              <option value="3ro-secundaria">3ro Secundaria</option>
+              <option value="4to-secundaria">4to Secundaria</option>
+              <option value="5to-secundaria">5to Secundaria</option>
+              <option value="egresado">Egresado</option>
+            </select>
+          </div>
+        </div>
+        
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Programa de Interés *</label>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+              <input type="radio" name="programa" value="matecero" class="mr-3">
+              <div>
+                <div class="font-medium">MATECERO</div>
+                <div class="text-sm text-gray-600">4to - 6to Primaria</div>
+              </div>
+            </label>
+            
+            <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+              <input type="radio" name="programa" value="basico" class="mr-3">
+              <div>
+                <div class="font-medium">BÁSICO</div>
+                <div class="text-sm text-gray-600">1ro - 2do Secundaria</div>
+              </div>
+            </label>
+            
+            <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+              <input type="radio" name="programa" value="intermedio" class="mr-3">
+              <div>
+                <div class="font-medium">INTERMEDIO</div>
+                <div class="text-sm text-gray-600">3ro - 4to Secundaria</div>
+              </div>
+            </label>
+            
+            <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+              <input type="radio" name="programa" value="preuniversitario" class="mr-3">
+              <div>
+                <div class="font-medium">PREUNIVERSITARIO</div>
+                <div class="text-sm text-gray-600">5to - Egresados</div>
+              </div>
+            </label>
+            
+            <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+              <input type="radio" name="programa" value="beca18" class="mr-3">
+              <div>
+                <div class="font-medium">BECA 18</div>
+                <div class="text-sm text-gray-600">Preparación PRONABEC</div>
+              </div>
+            </label>
+            
+            <label class="flex items-center p-3 border border-gray-300 rounded-lg cursor-pointer hover:bg-gray-50">
+              <input type="radio" name="programa" value="ciencias" class="mr-3">
+              <div>
+                <div class="font-medium">CIENCIAS</div>
+                <div class="text-sm text-gray-600">Física y Química</div>
+              </div>
+            </label>
+          </div>
+        </div>
+        
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">¿Cómo nos conociste?</label>
+          <select class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+            <option value="">Selecciona una opción</option>
+            <option value="redes-sociales">Redes Sociales</option>
+            <option value="recomendacion">Recomendación de amigos</option>
+            <option value="buscador">Búsqueda en Google</option>
+            <option value="publicidad">Publicidad</option>
+            <option value="otros">Otros</option>
+          </select>
+        </div>
+        
+        <div>
+          <label class="block text-sm font-medium text-gray-700 mb-2">Comentarios adicionales</label>
+          <textarea rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Cuéntanos tus objetivos académicos o alguna consulta especial..."></textarea>
+        </div>
+        
+        <div class="text-center">
+          <button type="submit" class="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all transform hover:scale-105">
+            Enviar Pre-inscripción
+          </button>
+          <p class="text-sm text-gray-600 mt-3">
+            Al enviar este formulario, nos contactaremos contigo en las próximas 24 horas
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Inversión y Beneficios -->
+<section class="py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-900 mb-4">Inversión y Beneficios</h2>
+      <p class="text-xl text-gray-600">Educación de calidad al alcance de todos</p>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <!-- Precios Accesibles -->
+      <div class="bg-green-50 rounded-xl p-6 text-center">
+        <div class="bg-green-500 w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <span class="material-icons icon-lg text-white">attach_money</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Precios Accesibles</h3>
+        <p class="text-gray-600 mb-4">Mensualidades desde S/. 120 con facilidades de pago y descuentos especiales</p>
+        <div class="space-y-2 text-sm">
+          <p class="text-green-700"><strong>✓</strong> Descuento por pago adelantado</p>
+          <p class="text-green-700"><strong>✓</strong> Hermanos estudian con descuento</p>
+          <p class="text-green-700"><strong>✓</strong> Planes de financiamiento</p>
+        </div>
+      </div>
+      
+      <!-- Material Incluido -->
+      <div class="bg-blue-50 rounded-xl p-6 text-center">
+        <div class="bg-blue-500 w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <span class="material-icons icon-lg text-white">library_books</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Todo Incluido</h3>
+        <p class="text-gray-600 mb-4">Sin costos adicionales, todo lo necesario está incluido en tu mensualidad</p>
+        <div class="space-y-2 text-sm">
+          <p class="text-blue-700"><strong>✓</strong> Material de estudio digital</p>
+          <p class="text-blue-700"><strong>✓</strong> Acceso a plataforma educativa</p>
+          <p class="text-blue-700"><strong>✓</strong> Simulacros ilimitados</p>
+        </div>
+      </div>
+      
+      <!-- Garantía -->
+      <div class="bg-purple-50 rounded-xl p-6 text-center">
+        <div class="bg-purple-500 w-16 h-16 rounded-full mx-auto mb-4 flex items-center justify-center">
+          <span class="material-icons icon-lg text-white">verified_user</span>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Garantía de Resultados</h3>
+        <p class="text-gray-600 mb-4">Si no ves mejoras en 30 días, te devolvemos tu dinero</p>
+        <div class="space-y-2 text-sm">
+          <p class="text-purple-700"><strong>✓</strong> Seguimiento personalizado</p>
+          <p class="text-purple-700"><strong>✓</strong> Evaluaciones continuas</p>
+          <p class="text-purple-700"><strong>✓</strong> Soporte 24/7</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Final -->
+<section class="bg-gradient-to-r from-green-500 to-blue-600 text-white py-16">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Listo para Comenzar?</h2>
+    <p class="text-xl mb-8 text-green-100">No esperes más, tu futuro académico comienza hoy</p>
+    
+    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+      <a href="https://wa.me/51964266258?text=Hola!%20Quiero%20inscribirme%20en%20los%20cursos%20del%20Grupo%20de%20Ciencias%20Veen%20Euler" class="bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-lg text-lg transition-colors flex items-center">
+        <span class="material-icons mr-2 text-white">message</span>
+        Inscribirse por WhatsApp
+      </a>
+      
+      <div class="text-center">
+        <p class="text-lg font-bold">📞 964 266 258</p>
+        <p class="text-sm text-green-100">Disponible 24/7</p>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
