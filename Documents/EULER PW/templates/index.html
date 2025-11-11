@@ -30,53 +30,25 @@
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="relative overflow-hidden rounded-xl shadow-lg">
       <!-- Slider Container -->
-      <div id="banner-slider" class="relative h-64 md:h-80 lg:h-96 bg-gray-200">
+      <div id="banner-slider" class="relative h-64 md:h-80 lg:h-96">
         <!-- Slide 1 -->
-        <div class="slide absolute inset-0 opacity-100 transition-opacity duration-500 bg-gradient-to-r from-blue-600 to-purple-600">
-          <img src="{{ url_for('static', filename='img/banners/image.png') }}" alt="Banner 1" class="w-full h-full object-cover" onerror="this.style.display='none';">
-          <div class="absolute inset-0 bg-gradient-to-r from-blue-600/80 to-purple-600/80 flex items-center justify-center">
-            <div class="text-center text-white px-4">
-              <span class="material-icons text-6xl mb-4 text-yellow-400">school</span>
-              <h3 class="text-2xl md:text-4xl font-bold mb-2">Excelencia Académica</h3>
-              <p class="text-lg md:text-xl">Preparación integral para tu futuro educativo</p>
-            </div>
-          </div>
+        <div class="slide absolute inset-0 opacity-100 transition-opacity duration-500">
+          <img src="{{ url_for('static', filename='img/banners/image.png') }}" alt="Banner 1" class="w-full h-full object-cover">
         </div>
         
         <!-- Slide 2 -->
-        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-500 bg-gradient-to-r from-green-600 to-blue-600">
-          <img src="{{ url_for('static', filename='img/banners/image1.png') }}" alt="Banner 2" class="w-full h-full object-cover" onerror="this.style.display='none';">
-          <div class="absolute inset-0 bg-gradient-to-r from-green-600/80 to-blue-600/80 flex items-center justify-center">
-            <div class="text-center text-white px-4">
-              <span class="material-icons text-6xl mb-4 text-yellow-400">computer</span>
-              <h3 class="text-2xl md:text-4xl font-bold mb-2">Metodología Virtual</h3>
-              <p class="text-lg md:text-xl">Clases 100% online con profesores especializados</p>
-            </div>
-          </div>
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-500">
+          <img src="{{ url_for('static', filename='img/banners/image1.png') }}" alt="Banner 2" class="w-full h-full object-cover">
         </div>
         
         <!-- Slide 3 -->
-        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-500 bg-gradient-to-r from-orange-600 to-red-600">
-          <img src="{{ url_for('static', filename='img/banners/image2.png') }}" alt="Banner 3" class="w-full h-full object-cover" onerror="this.style.display='none';">
-          <div class="absolute inset-0 bg-gradient-to-r from-orange-600/80 to-red-600/80 flex items-center justify-center">
-            <div class="text-center text-white px-4">
-              <span class="material-icons text-6xl mb-4 text-yellow-400">trending_up</span>
-              <h3 class="text-2xl md:text-4xl font-bold mb-2">Resultados Garantizados</h3>
-              <p class="text-lg md:text-xl">95% de nuestros estudiantes logran sus objetivos</p>
-            </div>
-          </div>
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-500">
+          <img src="{{ url_for('static', filename='img/banners/image2.png') }}" alt="Banner 3" class="w-full h-full object-cover">
         </div>
         
         <!-- Slide 4 -->
-        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-500 bg-gradient-to-r from-purple-600 to-pink-600">
-          <img src="{{ url_for('static', filename='img/banners/image3.png') }}" alt="Banner 4" class="w-full h-full object-cover" onerror="this.style.display='none';">
-          <div class="absolute inset-0 bg-gradient-to-r from-purple-600/80 to-pink-600/80 flex items-center justify-center">
-            <div class="text-center text-white px-4">
-              <span class="material-icons text-6xl mb-4 text-yellow-400">support_agent</span>
-              <h3 class="text-2xl md:text-4xl font-bold mb-2">Soporte 24/7</h3>
-              <p class="text-lg md:text-xl">Acompañamiento constante en tu proceso de aprendizaje</p>
-            </div>
-          </div>
+        <div class="slide absolute inset-0 opacity-0 transition-opacity duration-500">
+          <img src="{{ url_for('static', filename='img/banners/image3.png') }}" alt="Banner 4" class="w-full h-full object-cover">
         </div>
       </div>
       
@@ -679,30 +651,11 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(startSlideshow, 8000);
     });
 
-    // Verificar y manejar carga de imágenes
-    function handleImageLoad() {
-        const images = document.querySelectorAll('#banner-slider img');
-        images.forEach(img => {
-            // Si la imagen no carga, ocultar y mostrar solo el gradiente
-            img.addEventListener('error', function() {
-                this.style.display = 'none';
-                console.log('Banner image failed to load:', this.src);
-            });
-            
-            // Cuando la imagen carga correctamente
-            img.addEventListener('load', function() {
-                this.style.display = 'block';
-                console.log('Banner image loaded successfully:', this.src);
-            });
-        });
-    }
-
     // Inicializar slider
     showSlide(0);
-    handleImageLoad();
     startSlideshow();
 
-    // Precargar imágenes para mejor rendimiento
+    // Precargar imágenes
     const preloadImages = [
         "{{ url_for('static', filename='img/banners/image.png') }}",
         "{{ url_for('static', filename='img/banners/image1.png') }}",
@@ -710,10 +663,8 @@ document.addEventListener('DOMContentLoaded', function() {
         "{{ url_for('static', filename='img/banners/image3.png') }}"
     ];
 
-    preloadImages.forEach((src, index) => {
+    preloadImages.forEach(src => {
         const img = new Image();
-        img.onload = () => console.log(`✅ Banner ${index + 1} preloaded successfully`);
-        img.onerror = () => console.log(`❌ Banner ${index + 1} failed to preload`);
         img.src = src;
     });
 });
