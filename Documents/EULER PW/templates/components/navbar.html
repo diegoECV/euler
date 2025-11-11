@@ -75,14 +75,8 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.classList.add('bg-opacity-100');
         }
 
-        // Efecto de ocultar/mostrar navbar según dirección del scroll
-        if (scrollTop > lastScrollTop && scrollTop > 200) {
-            // Scroll hacia abajo - ocultar navbar
-            navbar.style.transform = 'translateY(-100%)';
-        } else {
-            // Scroll hacia arriba - mostrar navbar
-            navbar.style.transform = 'translateY(0)';
-        }
+        // Mantener navbar siempre visible (sticky navigation)
+        // El navbar permanece fijo en la parte superior sin ocultarse
         
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     }
