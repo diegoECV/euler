@@ -73,6 +73,42 @@
     <!-- Footer -->
     {% include 'components/footer.html' %}
     
+    <!-- Script para marcar página activa en navbar -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Marcar enlace activo en el navbar
+        const currentPath = window.location.pathname;
+        const navLinks = document.querySelectorAll('nav a[href]');
+        
+        navLinks.forEach(link => {
+          const href = link.getAttribute('href');
+          if (href === currentPath || (currentPath === '/' && href === '/')) {
+            link.classList.add('active');
+          }
+        });
+
+        // Mejorar el scroll suave para elementos internos
+        const internalLinks = document.querySelectorAll('a[href^="#"]');
+        internalLinks.forEach(link => {
+          link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            if (targetElement) {
+              const navbarHeight = document.getElementById('navbar').offsetHeight;
+              const targetPosition = targetElement.offsetTop - navbarHeight - 20;
+              
+              window.scrollTo({
+                top: targetPosition,
+                behavior: 'smooth'
+              });
+            }
+          });
+        });
+      });
+    </script>
+
     {% block extra_scripts %}{% endblock %}
   </body>
 </html>
